@@ -97,7 +97,6 @@
                             </div>
 
                             <button class="btn btn-primary" type="submit">检索</button>
-                            <!--排序下拉框-->
                             <div class="btn-group open">
                                 <button class="btn btn-success">排序</button>
                                 <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
@@ -113,8 +112,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- ./排序下拉框 -->
-                            <!--table-responsive-->
+
                             <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
@@ -143,8 +141,8 @@
                                         <td>14计算机科学与技术</td>
                                         <td>E座</td>
                                         <td>E241</td>
-                                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#studentModal">查看</button></td>
-                                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#dormModal">查看</button></td>
+                                        <td><button type="button" class="btn btn-xs btn-success">查看</button></td>
+                                        <td><button type="button" class="btn btn-xs btn-primary">查看</button></td>
                                     </tr>
                                      <tr class="success">
                                         <td>2</td>
@@ -155,8 +153,8 @@
                                         <td>16广播电视新闻学</td>
                                         <td>E座</td>
                                         <td>E241</td>
-                                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#studentModal">查看</button></td>
                                         <td><button type="button" class="btn btn-xs btn-success">查看</button></td>
+                                        <td><button type="button" class="btn btn-xs btn-primary">查看</button></td>
                                     </tr>
                                      <tr>
                                         <td>3</td>
@@ -197,7 +195,7 @@
                                </tbody>
                             </table>
                             </div>
-                            <!--./table-response-->
+
                             <div class="pull-right">
                                 <ul class="pagination">
                                     <li>
@@ -219,95 +217,6 @@
                             </div>
                             <!-- ./pagination -->
                         </div>
-                        <!--/col-ms-12-->
-                        <!-- 查看学生信息 -->
-                        <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static">
-                            <div class="modal-dialog" role="document" style="width:auto; max-width:800px">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title">宿生信息</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">                                       
-                                                        <label class="control-label">学号:</label>
-                                                        <input type="text" class="form-control" readonly="readonly" value="2014101027">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">姓名:</label>
-                                                        <input type="text" class="form-control" readonly="readonly" value="王俊皓">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">性别:</label>
-                                                        <input type="text" class="form-control" readonly="readonly" value="男">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">学院:</label>
-                                                        <input type="text" class="form-control" readonly="readonly" value="工学院">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">专业:</label>
-                                                        <input type="text" class="form-control" readonly="readonly" value="计算机科学与技术">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">现住宿舍:</label>
-                                                        <input type="text" class="form-control" readonly="readonly" value="弘毅 ABC">
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">联系电话:</label>
-                                                        <input type="text" class="form-control" readonly="readonly" value="12345678901">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">邮箱:</label>
-                                                        <input type="text" class="form-control" readonly="readonly"
-                                                        value="14jhwang@stu.edu.cn">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">当前状态:</label>
-                                                        <input type="text" class="form-control" readonly="readonly"
-                                                        value="在校本科生">
-                                                    </div>
-                                                </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /查看学生休息 -->
-                        <!-- 查看宿舍信息 -->
- 
-             
-                        <!-- /查看宿舍信息 -->
                     </div>
                 </div>
             </div>
