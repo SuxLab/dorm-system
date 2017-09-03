@@ -68,7 +68,9 @@
                     </a>
                 </li>
             </ul>
+
             <div class="tab-content">
+
                 <div class="tab-pane in active" id="needToDealt">
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -90,7 +92,7 @@
                                 <td>E666-6</td>
                                 <td>2017-10-01 08:00:00</td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="">
+                                    <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#changeDorm">
                                         查看及处理
                                     </button>
                                 </td>
@@ -102,7 +104,7 @@
                                 <td>E666-6</td>
                                 <td>2017-10-01 08:00:00</td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="">
+                                    <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#checkOut">
                                         查看及处理
                                     </button>
                                 </td>
@@ -112,6 +114,8 @@
                     </div>
 
                 </div>
+                <!--待办事项 panel-->
+
                 <div class="tab-pane" id="log">
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -162,12 +166,53 @@
 
                     </div>
                 </div>
+                <!--日志 panel-->
             </div>
         </div>
 
     </div>
 
 </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="changeDorm" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">处理调宿申请</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--处理调宿的模态框-->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="checkOut" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">处理调宿申请</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--处理退宿申请的模态框-->
+
+
 <!-- Bootstrap core JavaScript
   ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
