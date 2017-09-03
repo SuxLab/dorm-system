@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../image/favicon.ico">
 
-    <title>宿舍设施报修申请 - 宿舍管理系统</title>
+    <title>社区活动申请 - 宿舍管理系统</title>
 
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
                     <li>
                         <a href="index.html">宿舍退调申请</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="repair.html">宿舍设施报修申请</a>
                     </li>
                     <li>
@@ -62,7 +62,7 @@
                     <li>
                         <a href="resource.html">宿舍资源申请</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="activity.html">社区活动申请</a>
                     </li>
                     <li>
@@ -75,9 +75,9 @@
 
 
                 <h1 class="page-header">
-                    宿舍设施报修申请
+                    社区活动申请
                     <div class="pull-right">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#func_repair">申请报修</button>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#func_activity">申请活动</button>
                     </div>
                 </h1>
 
@@ -88,9 +88,9 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>报修时间</th>
-                                <th>申请人</th>
-                                <th>现住宿舍</th>
+                                <th>申请时间</th>
+                                <th>活动编号</th>
+                                <th>活动名称</th>
                                 <th>经办人</th>
                                 <th>状态</th>
                                 <th>操作</th>
@@ -99,20 +99,9 @@
                         <tbody>
                             <tr>
                                 <td>2017-05-02 17:33:34</td>
-                                <td>卢程</td>
-                                <td>弘毅 G613-2</td>
-                                <td>刘宿管</td>
-                                <td><span class="label label-warning">申请中</span></td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#detail_1">查看</button>
-                                    <button type="button" class="btn btn-danger btn-sm">取消</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2017-05-02 17:33:34</td>
-                                <td>卢程</td>
-                                <td>弘毅 G613-2</td>
-                                <td>刘宿管</td>
+                                <td>#123</td>
+                                <td>吃汉堡</td>
+                                <td>李新</td>
                                 <td><span class="label label-danger">申请失败</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#detail_1">查看</button>
@@ -127,12 +116,12 @@
     </div>
 
 
-    <div class="modal fade" id="func_repair" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal fade" id="func_activity" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document" style="width:auto; max-width:1000px">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">申请报修</h4>
+                    <h4 class="modal-title">申请活动</h4>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -141,68 +130,60 @@
 
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">学号:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="2014101027">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">姓名:</label>
+                                    <label class="control-label">申请人:</label>
                                     <input type="text" class="form-control" readonly="readonly" value="王俊皓">
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">学院:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="工学院">
+                                    <label class="control-label">申请时间:</label>
+                                    <input type="text" class="form-control" readonly="readonly" value="2017年 现在">
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">专业:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="计算机科学与技术">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">报修时间:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="2017年21年99日 -1时">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">现住宿舍:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="弘毅 ABC">
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">联系电话:</label>
+                                    <label class="control-label">活动名称:</label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">邮箱:</label>
-                                    <input type="text" class="form-control" value="14jhwang@stu.edu.cn">
+                                    <label class="control-label">活动举办方:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">活动举办时间:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">人数限制:</label>
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">报修描述:</label>
-                                    <input type="text" class="form-control" value="">
+                                    <label class="control-label">截止申请时间:</label>
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
 
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label">活动描述:</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label">备注:</label>
@@ -221,7 +202,7 @@
             </div>
         </div>
     </div>
-    <!-- modal - 申请报修 -->
+    <!-- modal - 申请活动 -->
 
 
     <div class="modal fade" id="detail_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -244,8 +225,8 @@
                             </div>
                             <!-- ︿(￣︶￣)︿ -->
                             <!-- 这里继续补充吧, 复制就OK -->
-                            <!-- 注意还有可能还有原因 -->
-
+                            <!-- 活动编号, 活动名称, 活动举办方, 活动时间, 活动截止时间, 人数限制, 申请人, 申请时间, 经办人, 申请状态, 活动描述, 备注 -->
+                            <!-- 注意可能还有失败原因 -->
                         </div>
 
                     </form>
