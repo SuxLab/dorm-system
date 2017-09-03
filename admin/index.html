@@ -295,8 +295,6 @@
                         </div>
                     </div>
                     <hr/>
-                    <button class="btn btn-danger">不同意调整</button>
-                    <hr/>
                     <p>调整方案：</p>
                     <div>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" style="padding-left: 0">
@@ -327,19 +325,19 @@
                     </div>
                     <p>备注：</p>
                     <div>
-                        <textarea class="form-control" placeholder="原因备注..."></textarea>
+                        <textarea class="form-control" placeholder="调整原因备注..."></textarea>
                     </div>
 
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary">确定</button>
+                <button class="btn btn-primary">确定调整方案</button>
+                <button class="btn btn-danger">不做任何调整</button>
             </div>
         </div>
     </div>
 </div>
-<!--处理调宿的模态框-->
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="checkOut" data-backdrop="static">
@@ -420,11 +418,6 @@
                         </div>
                     </div>
                     <hr/>
-                    <p>是否同意该生的退宿申请？</p>
-                    <div style="margin-bottom: 10px;">
-                        <button class="btn btn-primary">同意</button>
-                        <button class="btn btn-danger">不同意</button>
-                    </div>
                     <label class="control-label">备注:</label>
                     <div>
                         <textarea class="form-control" placeholder="原因备注..."></textarea>
@@ -433,12 +426,12 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary">确定</button>
+                <button class="btn btn-primary">同意</button>
+                <button class="btn btn-danger">不同意</button>
             </div>
         </div>
     </div>
 </div>
-<!--处理退宿申请的模态框-->
 
 <div class="modal fade" tabindex="-1" role="dialog" id="changeLog" data-backdrop="static">
     <div class="modal-dialog" style="width:auto; max-width:1000px">
