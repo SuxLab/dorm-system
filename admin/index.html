@@ -1,125 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../image/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../image/favicon.ico">
 
-  <title>宿舍管理系统 - 管理员主页</title>
+    <title>宿舍管理系统 - 管理员主页</title>
 
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/admin.css" rel="stylesheet">
-  
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
+
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 
     <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">学生宿舍管理系统</a>
-      </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">学生宿舍管理系统</a>
+        </div>
 
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
 
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> 李新老师</a></li>
-          <li><a href="#">注销</a></li>
-        </ul>
-      </div>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 李新老师</a></li>
+                <li><a href="#">注销</a></li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 col-xs-3 sidebar">
-        <ul class="nav nav-sidebar">
-          <li class="active"><a href="#">宿舍入退调申请处理<span class="sr-only">(current)</span></a></li>
-          <li><a href="#">宿舍报修申请处理</a></li>
-          <li><a href="#">宿舍资源申请处理</a></li>
-          <li><a href="#">社区活动申请处理</a></li>
-          <li><a href="#">共享书屋</a></li>
-          <li><a href="#">宿生信息检索</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-12 col-md-6">
-        <ul class="nav-tabs">
-            <li class="active">
-                <a href="#">
-
-                </a>
-
-            </li>
-        </ul>
-      </div>
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">宿舍入退调申请处理<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">宿舍报修申请处理</a></li>
+                <li><a href="#">宿舍资源申请处理</a></li>
+                <li><a href="#">社区活动申请处理</a></li>
+                <li><a href="#">共享书屋</a></li>
+                <li><a href="#">宿生信息检索</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">宿舍入退调申请处理</h1>
+            <ul class="nav nav-tabs">0
+                <li class="active">
+                    <a href="#" data-toggle="tab">
+                        待办事项
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tab">
+                        入宿处理
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tab">
+                        日志
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    # 宿舍入退调申请处理
 
-    <div class="col-sm-0 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <table class=".applicationInfo">
-        <thead>
-          <tr>
-            <th>
-              宿舍楼号
-            </th>
-            <th>
-              宿舍楼层
-            </th>
-            <th>
-              宿舍号
-            </th>
-            <th>
-              姓名
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <input type="" name="宿舍楼号">
-            </td>
-            <td>
-              <input type="" name="宿舍楼层">
-            </td>
-            <td>
-              <input type="" name="宿舍号">
-            </td>
-            <td>
-              <input type="" name="姓名">
-            </td>
-            <td>
-              <button>检索</button>
-            </td>
-          </tr>
-      </tbody>
-    </table> 
-
-  </div>
-<<<<<<< HEAD
-
-
-=======
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>
-      window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
-  </script>
-  <script src="../js/bootstrap.min.js"></script>
-  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-  <script src="../js/vendor/holder.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../js/ie10-viewport-bug-workaround.js"></script>
-  <script src="../js/ie10-viewport-bug-workaround.js"></script>
->>>>>>> f0effe2013140d8c44507075355d8adf627a6da4
+</div>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
+</script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
