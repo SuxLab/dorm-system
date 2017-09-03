@@ -77,24 +77,25 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
-// 新增
-.input{
-  position: relative;
-}
-.container{
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 100px;
-}
-.table{
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-.col-md-12{
-  position: relative;
-}
-.row clearfix{
-  width: 300px;
-}
+
+ /*!*新增*!*/
+/*.input{*/
+  /*position: relative;*/
+/*}*/
+/*.container{*/
+  /*position: relative;*/
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
+  /*width: 100px;*/
+/*}*/
+/*.table{*/
+  /*position: relative;*/
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
+/*}*/
+/*.col-md-12{*/
+  /*position: relative;*/
+/*}*/
+/*.row clearfix{*/
+  /*width: 300px;*/
+/*}*/
