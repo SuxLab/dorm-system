@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../image/favicon.ico">
+
+    <title>生活缴费 - 宿舍管理系统</title>
+
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/student.css" rel="stylesheet">
+
+
+    <style>
+        .table tbody tr td {
+            vertical-align: middle;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="#">学生宿舍管理系统</a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="info_student.html"><span class="glyphicon glyphicon-user"></span> 何铭宜 同学</a></li>
+                    <li><a href="#">注销</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 col-xs-3 sidebar" id="side">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">宿舍退调申请</a>
+                    </li>
+                    <li>
+                        <a href="repair.html">宿舍设施报修申请</a>
+                    </li>
+                    <li class="active">
+                        <a href="payment.html">生活缴费</a>
+                    </li>
+                    <li>
+                        <a href="resource.html">宿舍资源申请</a>
+                    </li>
+                    <li>
+                        <a href="activity.html">社区活动申请</a>
+                    </li>
+                    <li>
+                        <a href="book.html">共享书屋<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+
+                <h1 class="page-header">
+                    生活缴费
+                </h1>
+
+                <!-- <br> -->
+
+                <h3 class="sub-header">用费记录</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>用费单号</th>
+                                <th>宿舍地址</th>
+                                <th>缴费项目</th>
+                                <th>费用</th>
+                                <th>计量区间</th>
+                                <th>是否缴费</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#123123123</td>
+                                <td>东莞 422D</td>
+                                <td>空调</td>
+                                <td>三蚊鸡</td>
+                                <td>2017年4月11日-5月41日3分</td>
+                                <td><span class="label label-danger">未缴费</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#pay">缴费</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#123123123</td>
+                                <td>弘毅 411C</td>
+                                <td>空调</td>
+                                <td>五百万</td>
+                                <td>2017年4月11日-5月41日3分</td>
+                                <td><span class="label label-success">已缴费</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm" data-target="#pay">缴费</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h3 class="sub-header">缴费记录</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>用费单号</th>
+                                <th>宿舍地址</th>
+                                <th>缴费项目</th>
+                                <th>费用</th>
+                                <th>计量区间</th>
+                                <th>学生学号</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#123123123</td>
+                                <td>东莞 422D</td>
+                                <td>空调</td>
+                                <td>三蚊鸡</td>
+                                <td>2017年4月11日-5月41日3分</td>
+                                <td>2014101027</td>
+                            </tr>
+                            <tr>
+                                <td>#123123123</td>
+                                <td>弘毅 411C</td>
+                                <td>空调</td>
+                                <td>五百万</td>
+                                <td>2017年4月11日-5月41日3分</td>
+                                <td>2014101027</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../js/holder.min.js"></script>
+</body>
+
+</html>
