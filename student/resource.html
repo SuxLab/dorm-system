@@ -17,8 +17,18 @@
 
 
     <style>
+        .table {
+            table-layout: fixed;
+        }
+
         .table tbody tr td {
             vertical-align: middle;
+        }
+
+        td.desc {
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
         }
     </style>
 
@@ -113,12 +123,14 @@
                                     <tr>
                                         <td>#123123123</td>
                                         <td>打火机</td>
-                                        <td>很好用(注意这里后台截取一部分显示, 不然会超出范围)</td>
+                                        <td class="desc">
+                                            这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述
+                                        </td>
                                         <td><span class="label label-success">1 / 10</span></td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#func_detail">查看描述</button>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#func_remark">查看备注</button>
-                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#func_resource">申请使用</button>
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#func_detail">查看描述</button>
+                                            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#func_remark">查看备注</button>
+                                            <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#func_resource">申请使用</button>
                                         </td>
 
                                     </tr>
@@ -128,14 +140,35 @@
                                         <td>不好用的</td>
                                         <td><span class="label label-danger">10 / 10</span></td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#func_detail">查看描述</button>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#func_remark">查看备注</button>
-                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#func_resource" disabled="disabled">申请使用</button>
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#func_detail">查看描述</button>
+                                            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#func_remark">查看备注</button>
+                                            <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#func_resource" disabled="disabled">申请使用</button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+
+                        <div class="pull-right">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- ./pagination -->
                     </div>
                     <!-- /.tab-pane -->
 
@@ -160,9 +193,9 @@
                                         <td><span class="label label-success">申请成功</span></td>
                                         <td>绿橙</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#func_detail">查看描述</button>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#func_remark">查看备注</button>
-                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#func_delete">取消申请</button>
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#func_detail">查看描述</button>
+                                            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#func_remark">查看备注</button>
+                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#func_delete">取消申请</button>
                                         </td>
 
                                     </tr>
@@ -173,14 +206,35 @@
                                         <td><span class="label label-danger">已取消申请</span></td>
                                         <td>绿橙</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#func_detail">查看描述</button>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#func_remark">查看备注</button>
-                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#func_delete" disabled="disabled">取消申请</button>
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#func_detail">查看描述</button>
+                                            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#func_remark">查看备注</button>
+                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#func_delete" disabled="disabled">取消申请</button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+
+                        <div class="pull-right">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- ./pagination -->
                     </div>
                     <!-- /.tab-pane -->
 
@@ -205,8 +259,8 @@
                                         <td>2014年XX月XX日</td>
                                         <td>李新</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#func_reason">借用原因</button>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#func_remark">查看备注</button>
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#func_reason">借用原因</button>
+                                            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#func_remark">查看备注</button>
                                         </td>
 
                                     </tr>
@@ -217,49 +271,90 @@
                                         <td>2014年XX月XX日</td>
                                         <td>李新</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#func_detail">查看描述</button>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#func_detail">查看备注</button>
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#func_detail">查看描述</button>
+                                            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#func_detail">查看备注</button>
                                         </td>
 
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+
+                        <div class="pull-right">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- ./pagination -->
                     </div>
                     <!-- /.tab-pane -->
 
 
                     <div role="tabpanel" class="tab-pane" id="ac_borrow_record">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>申请人学号</th>
-                                            <th>申请人一卡通号</th>
-                                            <th>申请人姓名</th>
-                                            <th>借用时间</th>
-                                            <th>经办人</th>
-                                            <th>操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2014101027</td>
-                                            <td>066308</td>
-                                            <td>绿橙</td>
-                                            <td>2014年XX月XX日</td>
-                                            <td>李新</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#func_reason">借用原因</button>
-                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#func_remark">查看备注</button>
-                                            </td>
-    
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>申请人学号</th>
+                                        <th>申请人一卡通号</th>
+                                        <th>申请人姓名</th>
+                                        <th>借用时间</th>
+                                        <th>经办人</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2014101027</td>
+                                        <td>066308</td>
+                                        <td>绿橙</td>
+                                        <td>2014年XX月XX日</td>
+                                        <td>李新</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#func_reason">借用原因</button>
+                                            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#func_remark">查看备注</button>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- /.tab-pane -->
+                        <div class="pull-right">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- ./pagination -->
+                    </div>
+                    <!-- /.tab-pane -->
                 </div>
             </div>
         </div>
