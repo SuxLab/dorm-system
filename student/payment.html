@@ -78,95 +78,110 @@
                     生活缴费
                 </h1>
 
-                <!-- <br> -->
 
-                <h3 class="sub-header">用费记录</h3>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>用费单号</th>
-                                <th>宿舍地址</th>
-                                <th>缴费项目</th>
-                                <th>费用</th>
-                                <th>计量区间</th>
-                                <th>是否缴费</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#123123123</td>
-                                <td>东莞 422D</td>
-                                <td>空调</td>
-                                <td>三蚊鸡</td>
-                                <td>2017年4月11日-5月41日3分</td>
-                                <td><span class="label label-danger">未缴费</span></td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#pay">缴费</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#123123123</td>
-                                <td>弘毅 411C</td>
-                                <td>空调</td>
-                                <td>五百万</td>
-                                <td>2017年4月11日-5月41日3分</td>
-                                <td><span class="label label-success">已缴费</span></td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-sm" data-target="#pay">缴费</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#record" aria-controls="record" role="tab" data-toggle="tab">用费记录</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#pay_record" aria-controls="pay_record" role="tab" data-toggle="tab">缴费记录</a>
+                    </li>
+                </ul>
 
+                <div class="tab-content" style="margin-top: 10px">
 
-                <h3 class="sub-header">缴费记录</h3>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>用费单号</th>
-                                <th>宿舍地址</th>
-                                <th>缴费项目</th>
-                                <th>费用</th>
-                                <th>计量区间</th>
-                                <th>学生学号</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#123123123</td>
-                                <td>东莞 422D</td>
-                                <td>空调</td>
-                                <td>三蚊鸡</td>
-                                <td>2017年4月11日-5月41日3分</td>
-                                <td>2014101027</td>
-                            </tr>
-                            <tr>
-                                <td>#123123123</td>
-                                <td>弘毅 411C</td>
-                                <td>空调</td>
-                                <td>五百万</td>
-                                <td>2017年4月11日-5月41日3分</td>
-                                <td>2014101027</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div role="tabpanel" class="tab-pane active" id="record">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>用费单号</th>
+                                        <th>宿舍地址</th>
+                                        <th>缴费项目</th>
+                                        <th>费用</th>
+                                        <th>计量区间</th>
+                                        <th>是否缴费</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#123123123</td>
+                                        <td>东莞 422D</td>
+                                        <td>空调</td>
+                                        <td>三蚊鸡</td>
+                                        <td>2017年4月11日-5月41日3分</td>
+                                        <td><span class="label label-danger">未缴费</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#pay">缴费</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#123123123</td>
+                                        <td>弘毅 411C</td>
+                                        <td>空调</td>
+                                        <td>五百万</td>
+                                        <td>2017年4月11日-5月41日3分</td>
+                                        <td><span class="label label-success">已缴费</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm" data-target="#pay">缴费</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+
+                    <div role="tabpanel" class="tab-pane" id="pay_record">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>用费单号</th>
+                                        <th>宿舍地址</th>
+                                        <th>缴费项目</th>
+                                        <th>费用</th>
+                                        <th>计量区间</th>
+                                        <th>学生学号</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#123123123</td>
+                                        <td>东莞 422D</td>
+                                        <td>空调</td>
+                                        <td>三蚊鸡</td>
+                                        <td>2017年4月11日-5月41日3分</td>
+                                        <td>2014101027</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#123123123</td>
+                                        <td>弘毅 411C</td>
+                                        <td>空调</td>
+                                        <td>五百万</td>
+                                        <td>2017年4月11日-5月41日3分</td>
+                                        <td>2014101027</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- Bootstrap core JavaScript
+        <!-- Bootstrap core JavaScript
       ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../js/jquery-2.2.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../js/holder.min.js"></script>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../js/jquery-2.2.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+        <script src="../js/holder.min.js"></script>
 </body>
 
 </html>

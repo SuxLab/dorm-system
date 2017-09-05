@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,471 +15,470 @@
     <link href="../css/admin.css" rel="stylesheet">
 
 </head>
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
 
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">学生宿舍管理系统</a>
-        </div>
+                <a class="navbar-brand" href="#">学生宿舍管理系统</a>
+            </div>
 
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
 
-                <li><a href="info_admin"><span class="glyphicon glyphicon-user"></span> 李新老师</a></li>
-                <li><a data-toggle="modal" data-target="#logout">注销</a></li>
-            </ul>
+                    <li><a href="info_admin"><span class="glyphicon glyphicon-user"></span> 李新老师</a></li>
+                    <li><a data-toggle="modal" data-target="#logout">注销</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li><a href="index.html">宿舍退调申请处理</span></a></li>
-                <li class="active"><a href="repair.html">宿舍报修申请处理<span class="sr-only">(current)</span></a></li>
-                <li><a href="resource.html">宿舍资源申请处理</a></li>
-                <li><a href="activity.html">社区活动申请处理</a></li>
-                <li><a href="bookManager.html">共享书屋</a></li>
-                <li><a href="searchInfo.html">宿生信息检索</a></li>
-                <li><a href="checkIn.html">入宿处理</a></li>
-                <li><a href="notice.html">注意事项模板管理</a></li>
-                <li><a href="extraStayTime.html">留校时间段设置</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">宿舍设施保修申请处理</h1>
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#needToDealt" data-toggle="tab">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li><a href="index.html">宿舍退调申请处理</span></a></li>
+                    <li class="active"><a href="repair.html">宿舍报修申请处理<span class="sr-only">(current)</span></a></li>
+                    <li><a href="resource.html">宿舍资源申请处理</a></li>
+                    <li><a href="activity.html">社区活动申请处理</a></li>
+                    <li><a href="bookManager.html">共享书屋</a></li>
+                    <li><a href="searchInfo.html">宿生信息检索</a></li>
+                    <li><a href="checkIn.html">入宿处理</a></li>
+                    <li><a href="notice.html">注意事项模板管理</a></li>
+                    <li><a href="extraStayTime.html">留校时间段设置</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">宿舍设施保修申请处理</h1>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#needToDealt" data-toggle="tab">
                         待办事项
                     </a>
-                </li>
-                <li>
-                    <a href="#log" data-toggle="tab">
+                    </li>
+                    <li>
+                        <a href="#log" data-toggle="tab">
                         日志
                     </a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
 
-            <div class="tab-content">
-                <!--待办事项 panel-->
-                <div class="tab-pane in active" id="needToDealt">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>申请人</th>
-                                <th>宿舍-床位号</th>
-                                <th>报修标题</th>
-                                <th>申请时间</th>
-                                <th>操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>何铭宜</td>
-                                <td>E666-6</td>
-                                <td>空调坏了</td>
-                                <td>2017-10-01 08:00:00</td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                            data-target="#adminDealtRepair">
+                <div class="tab-content">
+                    <!--待办事项 panel-->
+                    <div class="tab-pane in active" id="needToDealt">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>申请人</th>
+                                        <th>宿舍-床位号</th>
+                                        <th>报修标题</th>
+                                        <th>申请时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>何铭宜</td>
+                                        <td>E666-6</td>
+                                        <td>空调坏了</td>
+                                        <td>2017-10-01 08:00:00</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminDealtRepair">
                                         查看及处理
                                     </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>何铭宜</td>
-                                <td>E666-6</td>
-                                <td>水管堵塞</td>
-                                <td>2017-10-01 08:00:00</td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                            data-target="#adminDealtRepair">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>何铭宜</td>
+                                        <td>E666-6</td>
+                                        <td>水管堵塞</td>
+                                        <td>2017-10-01 08:00:00</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminDealtRepair">
                                         查看及处理
                                     </button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                        <div class="pull-right">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
+                            <div class="pull-right">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
-                                </li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--日志 panel-->
+                    <div class="tab-pane" id="log">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>申请人</td>
+                                        <th>宿舍-床位号</th>
+                                        <th>报修标题</th>
+                                        <td>申请时间</td>
+                                        <td>状态</td>
+                                        <td>详情</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>张敏华</td>
+                                        <td>E444-4</td>
+                                        <td>水管爆了</td>
+                                        <td>2017-10-01 08:00:00</td>
+                                        <td>
+                                            <label class="label label-success">已维修</label>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminRepairLog">
+                                        查看
+                                    </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>张敏华</td>
+                                        <td>E444-4</td>
+                                        <td>水管爆了</td>
+                                        <td>2017-10-01 08:00:00</td>
+                                        <td>
+                                            <label class="label label-danger">不维修</label>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminRepairLog">
+                                        查看
+                                    </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="pull-right">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--日志 panel-->
-                <div class="tab-pane" id="log">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <td>#</td>
-                                <td>申请人</td>
-                                <th>宿舍-床位号</th>
-                                <th>报修标题</th>
-                                <td>申请时间</td>
-                                <td>状态</td>
-                                <td>详情</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>张敏华</td>
-                                <td>E444-4</td>
-                                <td>水管爆了</td>
-                                <td>2017-10-01 08:00:00</td>
-                                <td>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--待办事项modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="adminDealtRepair" data-backdrop="static">
+        <div class="modal-dialog" style="width:auto; max-width:1000px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                    <h4 class="modal-title">报修申请处理</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">学号:</label>
+                                    <label class="control-label">2014101027</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">姓名:</label>
+                                    <label class="control-label">王俊皓</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">申请时间:</label>
+                                    <label class="control-label">2017年21年99日 -1时</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">学院:</label>
+                                    <label class="control-label">工学院</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">专业:</label>
+                                    <label class="control-label">计算机科学与技术</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">宿舍:</label>
+                                    <label class="control-label">弘毅 ABC</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">联系电话:</label>
+                                    <label class="control-label">12312345678</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">邮箱:</label>
+                                    <label class="control-label">14jhwang@stu.edu.cn</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">报修标题:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label">备注:</label>
+                                    <textarea class="form-control" placeholder="原因备注..."></textarea>
+                                </div>
+                            </div>
+                            <hr/>
+                            <!--日期选择器未完善-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">预约时间段1:</label>
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--日期选择器未完善-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">预约时间段2:</label>
+                                    <div class='input-group date' id='datetimepicker2'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button class="btn btn-primary">已通知维修人员</button>
+                    <button class="btn btn-danger">不维修</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--日志modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="adminRepairLog" data-backdrop="static">
+        <div class="modal-dialog" style="width:auto; max-width:1000px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                    <h4 class="modal-title">报修日志查看</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">学号:</label>
+                                    <label class="control-label">2014101027</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">姓名:</label>
+                                    <label class="control-label">王俊皓</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">申请时间:</label>
+                                    <label class="control-label">2017年21年99日 -1时</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">学院:</label>
+                                    <label class="control-label">工学院</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">专业:</label>
+                                    <label class="control-label">计算机科学与技术</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">宿舍:</label>
+                                    <label class="control-label">弘毅 ABC</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">联系电话:</label>
+                                    <label class="control-label">12312345678</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">邮箱:</label>
+                                    <label class="control-label">14jhwang@stu.edu.cn</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">报修标题:</label>
+                                    <input type="text" class="form-control" readonly="readonly" value="水管爆了标题标题">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label">备注:</label>
+                                    <textarea class="form-control" readonly="readonly">balablabalabalablabalabalablabalabalablabalabalablabala</textarea>
+                                </div>
+                            </div>
+                            <hr/>
+                            <!--日期选择器未完善-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">预约时间段1:</label>
+                                    <label class="control-label">2017-08-10 14:00-16:10</label>
+                                </div>
+                            </div>
+
+                            <!--日期选择器未完善-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">预约时间段2:</label>
+                                    <label class="control-label">2017-08-10 16:00-18:10</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">状态:</label>
                                     <label class="label label-success">已维修</label>
-                                </td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                            data-target="#adminRepairLog">
-                                        查看
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>张敏华</td>
-                                <td>E444-4</td>
-                                <td>水管爆了</td>
-                                <td>2017-10-01 08:00:00</td>
-                                <td>
-                                    <label class="label label-danger">不维修</label>
-                                </td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                            data-target="#adminRepairLog">
-                                        查看
-                                    </button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                </div>
+                            </div>
 
-                        <div class="pull-right">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确定</button>
                 </div>
             </div>
         </div>
-
     </div>
 
-</div>
-
-<!--待办事项modal-->
-<div class="modal fade" tabindex="-1" role="dialog" id="adminDealtRepair" data-backdrop="static">
-    <div class="modal-dialog" style="width:auto; max-width:1000px">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+    <!--注销modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="logout" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                <h4 class="modal-title">报修申请处理</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学号:</label>
-                                <label class="control-label">2014101027</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">姓名:</label>
-                                <label class="control-label">王俊皓</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">申请时间:</label>
-                                <label class="control-label">2017年21年99日 -1时</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学院:</label>
-                                <label class="control-label">工学院</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">专业:</label>
-                                <label class="control-label">计算机科学与技术</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">宿舍:</label>
-                                <label class="control-label">弘毅 ABC</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">联系电话:</label>
-                                <label class="control-label">12312345678</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">邮箱:</label>
-                                <label class="control-label">14jhwang@stu.edu.cn</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">报修标题:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <textarea class="form-control" placeholder="原因备注..."></textarea>
-                            </div>
-                        </div>
-                        <hr/>
-                        <!--日期选择器未完善-->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">预约时间段1:</label>
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--日期选择器未完善-->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">预约时间段2:</label>
-                                <div class='input-group date' id='datetimepicker2'>
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button class="btn btn-primary">已通知维修人员</button>
-                <button class="btn btn-danger">不维修</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--日志modal-->
-<div class="modal fade" tabindex="-1" role="dialog" id="adminRepairLog" data-backdrop="static">
-    <div class="modal-dialog" style="width:auto; max-width:1000px">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                <h4 class="modal-title">报修日志查看</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学号:</label>
-                                <label class="control-label">2014101027</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">姓名:</label>
-                                <label class="control-label">王俊皓</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">申请时间:</label>
-                                <label class="control-label">2017年21年99日 -1时</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学院:</label>
-                                <label class="control-label">工学院</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">专业:</label>
-                                <label class="control-label">计算机科学与技术</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">宿舍:</label>
-                                <label class="control-label">弘毅 ABC</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">联系电话:</label>
-                                <label class="control-label">12312345678</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">邮箱:</label>
-                                <label class="control-label">14jhwang@stu.edu.cn</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">报修标题:</label>
-                                <input type="text" class="form-control" readonly="readonly" value="水管爆了标题标题">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <textarea class="form-control" readonly="readonly">balablabalabalablabalabalablabalabalablabalabalablabala</textarea>
-                            </div>
-                        </div>
-                        <hr/>
-                        <!--日期选择器未完善-->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">预约时间段1:</label>
-                                <label class="control-label">2017-08-10 14:00-16:10</label>
-                            </div>
-                        </div>
-
-                        <!--日期选择器未完善-->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">预约时间段2:</label>
-                                <label class="control-label">2017-08-10 16:00-18:10</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">状态:</label>
-                                <label class="label label-success">已维修</label>
-                            </div>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary">确定</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--注销modal-->
-<div class="modal fade" tabindex="-1" role="dialog" id="logout" data-backdrop="static">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                <h4 class="modal-title">提示</h4>
-            </div>
-            <div class="modal-body">
-                <p>是否注销？</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <a href="../index.html">
+                    <h4 class="modal-title">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p>是否注销？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <a href="../index.html">
                     <button type="button" class="btn btn-primary">确定</button>
                 </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-    window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
-</script>
-<script src="../js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="../js/vendor/holder.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../js/ie10-viewport-bug-workaround.js"></script>
-<script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
+
+    </script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
 </body>
+
 </html>
