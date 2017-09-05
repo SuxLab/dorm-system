@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../image/favicon.ico">
+
+    <title>管理员主页 - 宿舍管理系统</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">学生宿舍管理系统</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="info_admin"><span class="glyphicon glyphicon-user"></span> 李新老师</a></li>
+                <li><a data-toggle="modal" data-target="#logout">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li><a href="index.html">宿舍退调申请处理<span class="sr-only">(current)</span></a></li>
+                <li><a href="repair.html">宿舍报修申请处理</a></li>
+                <li><a href="resource.html">宿舍资源申请处理</a></li>
+                <li><a href="activity.html">社区活动申请处理</a></li>
+                <li><a href="bookManager.html">共享书屋</a></li>
+                <li><a href="searchInfo.html">宿生信息检索</a></li>
+                <li><a href="checkIn.html">入宿处理</a></li>
+                <li><a href="notice.html">注意事项模板管理</a></li>
+                <li class="active"><a href="extraStayTime.html">留校时间段设置</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">
+                留校时间段设置
+                
+                <div class="btn-group pull-right">
+                     <button class="btn btn-primary" >留校时间更改</button>
+                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                             <a href="#">2017年寒假留校时间更改</a>
+                        </li>
+                        <li>
+                             <a href="#">2017年暑假留校时间更改</a>
+                        </li>
+                        <li>
+                             <a href="#">2018年寒假留校时间更改</a>
+                        </li>
+                        <li>
+                             <a href="#">2018年暑假留校时间更改</a>
+                        </li>
+                        <li class="divider">
+                        </li>
+                        <li>
+                             <a href="#">更多</a>
+                        </li>
+                    </ul>
+                </div>  
+               
+            </h1>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#winterTime" data-toggle="tab">寒假留校时间</a>
+                </li>
+                <li>
+                    <a href="#summerTime" data-toggle="tab">暑假留校时间</a>
+                </li>
+               
+            </ul>
+
+            <div class="tab-content">
+
+                <div class="tab-pane in active" id="winterTime">
+                    <div class="table-responsive">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-md-8 column" style="padding-left: 200px">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                            <p><h4 style="text-align: center;">Winter Vocation</h4></p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <label style="padding-left: 20px">年份</label>
+                                        <br>
+                                        <div class="col-md-4" style="padding-left: 20px" >
+                                            <select name="" id="year" class="form-control" style="width:300px;padding:3px 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                                                <option value="">2017年</option>
+                                                <option value="">2018年</option>
+                                                <option value="">2019年</option>
+                                                <option value="">2020年</option>
+                                            </select>
+                                        </div>
+                                        <br>
+                                        <label style="padding-left: 20px">第一阶段</label>
+                                        <br>
+                                        <div class="col-md-4" style="padding-left: 20px" >
+                                            <select name="" id="year" class="form-control" style="width:300px;padding:3px 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                                                <option value="">2017年</option>
+                                                <option value="">2018年</option>
+                                                <option value="">2019年</option>
+                                                <option value="">2020年</option>
+                                            </select>
+                                        </div>
+
+                                        <br>
+
+                                        <label style="padding-left: 20px">第一阶段</label>
+                                        <br>
+                                        <div class="col-md-4" style="padding-left: 20px" >
+                                            <select name="" id="year" class="form-control" style="width:300px;padding:3px 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                                                <option value="">2017年</option>
+                                                <option value="">2018年</option>
+                                                <option value="">2019年</option>
+                                                <option value="">2020年</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                        <div class="panel-footer">
+                                            Panel footer
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+
+                </div>
+                <!--寒假留校时间 panel-->
+
+                <div class="tab-pane" id="summerTime">
+                    <div class="table-responsive">
+                        出去浪吗
+                    </div>
+                </div>
+                <!--暑假留校时间 panel-->
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--2017年寒假留校时间修改modal-->
+<div class="modal fade" tabindex="-1" role="dialog" id="changeDorm" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">处理调宿申请</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学号:</label>
+                                <label class="control-label">2014101027</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">姓名:</label>
+                                <label class="control-label">王俊皓</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">申请时间:</label>
+                                <label class="control-label">2017年21年99日 -1时</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学院:</label>
+                                <label class="control-label">工学院</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">专业:</label>
+                                <label class="control-label" >计算机科学与技术</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">宿舍:</label>
+                                <label class="control-label">弘毅 ABC</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">联系电话:</label>
+                                <label class="control-label">12312345678</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">邮箱:</label>
+                                <label class="control-label">14jhwang@stu.edu.cn</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">拟申请宿舍:</label>
+                                <label class="control-label">弘毅 XYZ</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <p>
+                                    balabalabalabalabalabalabalabalabalabalabalabala
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <p>调整方案：</p>
+                    <div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" style="padding-left: 0">
+                            <div class="input-group">
+                                <span class="input-group-addon">宿舍楼号</span>
+                                <input type="text" class="form-control" placeholder="宿舍楼号" name="dorm_floor_number"
+                                       value="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">宿舍楼层</span>
+                                <input type="text" class="form-control" autocomplete="off" placeholder="宿舍楼层" name="dorm_floor" value="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">宿舍号</span>
+                                <input type="text" class="form-control" placeholder="宿舍号" autocomplete="off" name="dorm_number" value="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">床位号</span>
+                                <input type="text" class="form-control" placeholder="床位号" autocomplete="off" name="bed_number" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <p>备注：</p>
+                    <div>
+                        <textarea class="form-control" placeholder="调整原因备注..."></textarea>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button class="btn btn-primary">确定调整方案</button>
+                <button class="btn btn-danger">不做任何调整</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--2017年暑假留校时间修改modal-->
+<div class="modal fade" tabindex="-1" role="dialog" id="checkOut" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">处理退宿申请</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学号:</label>
+                                <label class="control-label">2014101027</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">姓名:</label>
+                                <label class="control-label">王俊皓</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">申请时间:</label>
+                                <label class="control-label">2017年21年99日 -1时</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学院:</label>
+                                <label class="control-label">工学院</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">专业:</label>
+                                <label class="control-label" >计算机科学与技术</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">宿舍:</label>
+                                <label class="control-label">弘毅 ABC</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">联系电话:</label>
+                                <label class="control-label">12312345678</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">邮箱:</label>
+                                <label class="control-label">14jhwang@stu.edu.cn</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <p>
+                                    balabalabalabalabalabalabalabalabalabalabalabala
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <label class="control-label">备注:</label>
+                    <div>
+                        <textarea class="form-control" placeholder="原因备注..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button class="btn btn-primary">同意</button>
+                <button class="btn btn-danger">不同意</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--2018年寒假留校时间修改modal-->
+<div class="modal fade" tabindex="-1" role="dialog" id="changeLog" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">查看调宿申请</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学号:</label>
+                                <label class="control-label">2014101027</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">姓名:</label>
+                                <label class="control-label">王俊皓</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">申请时间:</label>
+                                <label class="control-label">2017年21年99日 -1时</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学院:</label>
+                                <label class="control-label">工学院</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">专业:</label>
+                                <label class="control-label" >计算机科学与技术</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">宿舍:</label>
+                                <label class="control-label">弘毅 ABC</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">联系电话:</label>
+                                <label class="control-label">12312345678</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">邮箱:</label>
+                                <label class="control-label">14jhwang@stu.edu.cn</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">拟申请宿舍:</label>
+                                <label class="control-label">弘毅 XYZ</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <p>
+                                    balabalabalabalabalabalabalabalabalabalabalabala
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">经办人:</label>
+                                <input type="text" class="form-control" readonly="readonly" value="李新老师">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">处理时间:</label>
+                                <input type="text" class="form-control" readonly="readonly" value="2017-08-09 14:00:00">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">状态:</label>
+                                <label class="label label-success">允许</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <textarea class="form-control" placeholder="处理原因..." readonly="readonly">balabalabalabalabalabalabalabalabalabalabalabala
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--2018年暑假留校时间修改modal-->
+<div class="modal fade" tabindex="-1" role="dialog" id="checkOutLog" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">查看退宿申请</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学号:</label>
+                                <label class="control-label">2014101027</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">姓名:</label>
+                                <label class="control-label">王俊皓</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">申请时间:</label>
+                                <label class="control-label">2017年21年99日 -1时</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学院:</label>
+                                <label class="control-label">工学院</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">专业:</label>
+                                <label class="control-label" >计算机科学与技术</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">原住宿舍:</label>
+                                <label class="control-label">弘毅 ABC</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">联系电话:</label>
+                                <label class="control-label">12312345678</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">邮箱:</label>
+                                <label class="control-label">14jhwang@stu.edu.cn</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <p>
+                                    balabalabalabalabalabalabalabalabalabalabalabala
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">经办人:</label>
+                                <input type="text" class="form-control" readonly="readonly" value="李新老师">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">处理时间:</label>
+                                <input type="text" class="form-control" readonly="readonly" value="2017-08-09 14:00:00">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">状态:</label>
+                                <label class="label label-danger">拒绝</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <textarea class="form-control" placeholder="处理原因..." readonly="readonly">balabalabalabalabalabalabalabalabalabalabalabala
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
+</script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+    
