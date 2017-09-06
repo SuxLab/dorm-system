@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../image/favicon.ico">
 
-    <title>管理员主页 - 宿舍管理系统</title>
+    <title>活动申请处理 - 宿舍管理系统</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/admin.css" rel="stylesheet">
@@ -45,10 +45,10 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="index.html">宿舍退调申请处理<span class="sr-only">(current)</span></a></li>
-                    <li><a href="repair.html">宿舍报修申请处理</a></li>
+                    <li><a href="index.html">宿舍退调申请处理</span></a></li>
+                    <li><a href="repair.html">宿舍报修申请处理<span class="sr-only">(current)</span></a></li>
                     <li><a href="resource.html">宿舍资源申请处理</a></li>
-                    <li><a href="activity.html">社区活动申请处理</a></li>
+                    <li  class="active"><a href="activity.html">社区活动申请处理</a></li>
                     <li><a href="bookManager.html">共享书屋</a></li>
                     <li><a href="searchInfo.html">宿生信息检索</a></li>
                     <li><a href="checkIn.html">入宿处理</a></li>
@@ -57,7 +57,7 @@
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">宿舍退调申请处理</h1>
+                <h1 class="page-header">社区活动申请处理</h1>
                 <ul class="nav nav-tabs">
                     <li class="active">
                         <a href="#needToDealt" data-toggle="tab">
@@ -72,111 +72,42 @@
                 </ul>
 
                 <div class="tab-content">
-
+                    <!--待办事项 panel-->
                     <div class="tab-pane in active" id="needToDealt">
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th>申请项</th>
-                                        <th>申请人</th>
-                                        <th>现住宿舍</th>
+                                        <th>编号</th>
                                         <th>申请时间</th>
+                                        <th>活动名称</th>
+                                        <th>申请人</th>
+                                        <th>学号</th>
                                         <th>操作</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>调宿</td>
-                                        <td>何铭宜</td>
-                                        <td>E666-6</td>
                                         <td>2017-10-01 08:00:00</td>
+                                        <td>舞蹈大赛</td>
+                                        <td>刘彩君</td>
+                                        <td>2014XXXXXX</td>
                                         <td>
-                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#changeDorm">
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminDealtRepair">
                                         查看及处理
                                     </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>退宿</td>
-                                        <td>何铭宜</td>
-                                        <td>E666-6</td>
                                         <td>2017-10-01 08:00:00</td>
+                                        <td>十大歌手</td>
+                                        <td>王俊皓</td>
+                                        <td>2014XXXXXX</td>
                                         <td>
-                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#checkOut">
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminDealtRepair">
                                         查看及处理
-                                    </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <div class="pull-right">
-                                <ul class="pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--待办事项 panel-->
-
-                    <div class="tab-pane" id="log">
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <td>#</td>
-                                        <td>申请项</td>
-                                        <td>申请人</td>
-                                        <td>申请时间</td>
-                                        <td>状态</td>
-                                        <td>详情</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>调宿</td>
-                                        <td>张敏华</td>
-                                        <td>2017-10-01 08:00:00</td>
-                                        <td>
-                                            <label class="label label-success">允许</label>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#changeLog">
-                                        查看
-                                    </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>退宿</td>
-                                        <td>张敏华</td>
-                                        <td>2017-10-01 08:00:00</td>
-                                        <td>
-                                            <label class="label label-danger">拒绝</label>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#checkOutLog">
-                                        查看
                                     </button>
                                         </td>
                                     </tr>
@@ -205,6 +136,75 @@
                         </div>
                     </div>
                     <!--记录 panel-->
+                    <div class="tab-pane" id="log">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>编号</td>
+                                        <td>申请时间</td>
+                                        <th>报修标题</th>
+                                        <td>申请人</td>
+                                        <th>学号</th>
+                                        <td>状态</td>
+                                        <td>详情</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2017-10-01 08:00:00</td>
+                                        <td>十大歌手</td>
+                                        <td>张敏华</td>
+                                        <td>2014YYYYYY</td>
+                                        <td>
+                                            <label class="label label-success">成功</label>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminRepairLog">
+                                        查看
+                                    </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2017-10-01 08:00:00</td>
+                                        <td>厨艺-寿司</td>
+                                        <td>张敏华</td>
+                                        <td>2014YYYYYY</td>
+                                        <td>
+                                            <label class="label label-danger">失败</label>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminRepairLog">
+                                        查看
+                                    </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="pull-right">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -212,14 +212,14 @@
 
     </div>
 
-    <!--调宿处理modal-->
-    <div class="modal fade" tabindex="-1" role="dialog" id="changeDorm" data-backdrop="static">
+    <!--待办事项modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="adminDealtRepair" data-backdrop="static">
         <div class="modal-dialog" style="width:auto; max-width:1000px">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">处理调宿申请</h4>
+                    <h4 class="modal-title">活动申请处理</h4>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -266,6 +266,84 @@
                                 </div>
                             </div>
 
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">联系电话:</label>
+                                    <label class="control-label">12312345678</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">邮箱:</label>
+                                    <label class="control-label">14jhwang@stu.edu.cn</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">活动名称:</label>
+                                    <label class="control-label">十大歌手:</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label">描述:</label>
+                                    <p class="control-label">这是学生申请活动的描述。</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label">备注:</label>
+                                    <p class="control-label">这是学生申请活动的备注。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <hr/>
+                    <form>
+                        <h3>处理：</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">活动编号:</label>
+                                    <label class="control-label"></label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">姓名:</label>
+                                    <label class="control-label">王俊皓</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">申请时间:</label>
+                                    <label class="control-label">2017年21年99日 -1时</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">学院:</label>
+                                    <label class="control-label">工学院</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">专业:</label>
+                                    <label class="control-label">计算机科学与技术</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">宿舍:</label>
+                                    <label class="control-label">弘毅 ABC</label>
+                                </div>
+                            </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
@@ -280,75 +358,38 @@
                                     <label class="control-label">14jhwang@stu.edu.cn</label>
                                 </div>
                             </div>
-
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">拟申请宿舍:</label>
-                                    <label class="control-label">弘毅 XYZ</label>
+                                    <label class="control-label">活动名称:</label>
+                                    <label class="control-label">十大歌手:</label>
                                 </div>
                             </div>
-
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label">备注:</label>
-                                    <p>
-                                        balabalabalabalabalabalabalabalabalabalabalabala
-                                    </p>
+                                    <p class="control-label">这是学生申请活动的备注。</p>
                                 </div>
                             </div>
                         </div>
-                        <hr/>
-                        <p>调整方案：</p>
-                        <div>
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" style="padding-left: 0">
-                                <div class="input-group">
-                                    <span class="input-group-addon">宿舍楼号</span>
-                                    <input type="text" class="form-control" placeholder="宿舍楼号" name="dorm_floor_number" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="input-group">
-                                    <span class="input-group-addon">宿舍楼层</span>
-                                    <input type="text" class="form-control" autocomplete="off" placeholder="宿舍楼层" name="dorm_floor" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="input-group">
-                                    <span class="input-group-addon">宿舍号</span>
-                                    <input type="text" class="form-control" placeholder="宿舍号" autocomplete="off" name="dorm_number" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="input-group">
-                                    <span class="input-group-addon">床位号</span>
-                                    <input type="text" class="form-control" placeholder="床位号" autocomplete="off" name="bed_number" value="">
-                                </div>
-                            </div>
-                        </div>
-                        <p>备注：</p>
-                        <div>
-                            <textarea class="form-control" placeholder="调整原因备注..."></textarea>
-                        </div>
-
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button class="btn btn-primary">确定调整方案</button>
-                    <button class="btn btn-danger">不做任何调整</button>
+                    <button class="btn btn-primary">已通知维修人员</button>
+                    <button class="btn btn-danger">不维修</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--退宿处理modal-->
-    <div class="modal fade" tabindex="-1" role="dialog" id="checkOut" data-backdrop="static">
+    <!--记录modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="adminRepairLog" data-backdrop="static">
         <div class="modal-dialog" style="width:auto; max-width:1000px">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">处理退宿申请</h4>
+                    <h4 class="modal-title">报修记录查看</h4>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -395,7 +436,6 @@
                                 </div>
                             </div>
 
-
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <label class="control-label">联系电话:</label>
@@ -409,263 +449,41 @@
                                     <label class="control-label">14jhwang@stu.edu.cn</label>
                                 </div>
                             </div>
-
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">活动名称:</label>
+                                    <input type="text" class="form-control" readonly="readonly" value="水管爆了标题标题">
+                                </div>
+                            </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label">备注:</label>
-                                    <p>
-                                        balabalabalabalabalabalabalabalabalabalabalabala
-                                    </p>
+                                    <textarea class="form-control" readonly="readonly">balablabalabalablabalabalablabalabalablabalabalablabala</textarea>
                                 </div>
                             </div>
-                        </div>
-                        <hr/>
-                        <label class="control-label">备注:</label>
-                        <div>
-                            <textarea class="form-control" placeholder="原因备注..."></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button class="btn btn-primary">同意</button>
-                    <button class="btn btn-danger">不同意</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--调宿记录modal-->
-    <div class="modal fade" tabindex="-1" role="dialog" id="changeLog" data-backdrop="static">
-        <div class="modal-dialog" style="width:auto; max-width:1000px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">查看调宿申请</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <hr/>
+                            <!--日期选择器未完善-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">学号:</label>
-                                    <label class="control-label">2014101027</label>
+                                    <label class="control-label">预约时间段1:</label>
+                                    <label class="control-label">2017-08-10 14:00-16:10</label>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <!--日期选择器未完善-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <label class="control-label">姓名:</label>
-                                    <label class="control-label">王俊皓</label>
+                                    <label class="control-label">预约时间段2:</label>
+                                    <label class="control-label">2017-08-10 16:00-18:10</label>
                                 </div>
                             </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">申请时间:</label>
-                                    <label class="control-label">2017年21年99日 -1时</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学院:</label>
-                                    <label class="control-label">工学院</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">专业:</label>
-                                    <label class="control-label">计算机科学与技术</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">宿舍:</label>
-                                    <label class="control-label">弘毅 ABC</label>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">联系电话:</label>
-                                    <label class="control-label">12312345678</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">邮箱:</label>
-                                    <label class="control-label">14jhwang@stu.edu.cn</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">拟申请宿舍:</label>
-                                    <label class="control-label">弘毅 XYZ</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label">备注:</label>
-                                    <p>
-                                        balabalabalabalabalabalabalabalabalabalabalabala
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">经办人:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="李新老师">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">处理时间:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="2017-08-09 14:00:00">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div class="form-group">
                                     <label class="control-label">状态:</label>
-                                    <label class="label label-success">允许</label>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label">备注:</label>
-                                    <textarea class="form-control" placeholder="处理原因..." readonly="readonly">balabalabalabalabalabalabalabalabalabalabalabala
-                                </textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确定</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--退宿记录modal-->
-    <div class="modal fade" tabindex="-1" role="dialog" id="checkOutLog" data-backdrop="static">
-        <div class="modal-dialog" style="width:auto; max-width:1000px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">查看退宿申请</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学号:</label>
-                                    <label class="control-label">2014101027</label>
+                                    <label class="label label-success">已维修</label>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">姓名:</label>
-                                    <label class="control-label">王俊皓</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">申请时间:</label>
-                                    <label class="control-label">2017年21年99日 -1时</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学院:</label>
-                                    <label class="control-label">工学院</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">专业:</label>
-                                    <label class="control-label">计算机科学与技术</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">原住宿舍:</label>
-                                    <label class="control-label">弘毅 ABC</label>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">联系电话:</label>
-                                    <label class="control-label">12312345678</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">邮箱:</label>
-                                    <label class="control-label">14jhwang@stu.edu.cn</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label">备注:</label>
-                                    <p>
-                                        balabalabalabalabalabalabalabalabalabalabalabala
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">经办人:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="李新老师">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">处理时间:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="2017-08-09 14:00:00">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">状态:</label>
-                                    <label class="label label-danger">拒绝</label>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label">备注:</label>
-                                    <textarea class="form-control" placeholder="处理原因..." readonly="readonly">balabalabalabalabalabalabalabalabalabalabalabala
-                                </textarea>
-                                </div>
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -691,7 +509,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <a href="../index.html"><button type="button" class="btn btn-primary">确定</button></a>
+                    <a href="../index.html">
+                    <button type="button" class="btn btn-primary">确定</button>
+                </a>
                 </div>
             </div>
         </div>
