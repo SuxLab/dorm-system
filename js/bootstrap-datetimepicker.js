@@ -1494,6 +1494,17 @@
   };
   $.fn.datetimepicker.Constructor = Datetimepicker;
   var dates = $.fn.datetimepicker.dates = {
+    zh: {
+      days:        ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+      daysShort:   ['周日', '周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+      daysMin:     ['周日', '周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+      months:      ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+      monthsShort: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+      meridiem:    ['上午', '下午'],
+      suffix:      ['st', 'nd', 'rd', 'th'],
+      today:       '今天',
+      clear:       'Clear'
+    },
     en: {
       days:        ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       daysShort:   ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -1505,6 +1516,7 @@
       today:       'Today',
       clear:       'Clear'
     }
+
   };
 
   var DPGlobal = {

@@ -9,9 +9,15 @@
     <link rel="icon" href="../image/favicon.ico">
 
     <title>管理员主页 - 宿舍管理系统</title>
-
+    <style>
+        .input-group{
+            padding:3px 10px;
+            border-top-left-radius: 15px;
+        } 
+    </style>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/admin.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
 </head>
 <body>
@@ -65,16 +71,16 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li>
-                             <a href="#">2017年寒假留校时间更改</a>
+                             <a data-toggle="modal" href="#winter2017Modal">2017年寒假留校时间更改</a>
                         </li>
                         <li>
-                             <a href="#">2017年暑假留校时间更改</a>
+                             <a data-toggle="modal" href="#summer2017Modal">2017年暑假留校时间更改</a>
                         </li>
                         <li>
-                             <a href="#">2018年寒假留校时间更改</a>
+                             <a data-toggle="modal" href="#winter2018Modal">2018年寒假留校时间更改</a>
                         </li>
                         <li>
-                             <a href="#">2018年暑假留校时间更改</a>
+                             <a data-toggle="modal" href="#summer2018Modal">2018年暑假留校时间更改</a>
                         </li>
                         <li class="divider">
                         </li>
@@ -87,10 +93,10 @@
             </h1>
             <ul class="nav nav-tabs">
                 <li class="active">
-                    <a href="#winterTime" data-toggle="tab">寒假留校时间</a>
+                    <a href="#winterTime" data-toggle="tab">留校时间设置</a>
                 </li>
                 <li>
-                    <a href="#summerTime" data-toggle="tab">暑假留校时间</a>
+                    <a href="#summerTime" data-toggle="tab">留校注意事项</a>
                 </li>
                
             </ul>
@@ -102,49 +108,72 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-md-8 column" style="padding-left: 200px">
+                        <div class="col-lg-8 col-md-10 col-sm-8 col-xs-8 column" style="padding-left: 200px">
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">
-                                            <p><h4 style="text-align: center;">Winter Vocation</h4></p>
+                                        <p>
+                                            <h4 style="text-align: center;">Vocation VS Learning</h4>
+                                        </p>
                                     </div>
                                     <div class="panel-body">
-                                        <label style="padding-left: 20px">年份</label>
-                                        <br>
-                                        <div class="col-md-4" style="padding-left: 20px" >
-                                            <select name="" id="year" class="form-control" style="width:300px;padding:3px 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
-                                                <option value="">2017年</option>
-                                                <option value="">2018年</option>
-                                                <option value="">2019年</option>
-                                                <option value="">2020年</option>
-                                            </select>
-                                        </div>
-                                        <br>
-                                        <label style="padding-left: 20px">第一阶段</label>
-                                        <br>
-                                        <div class="col-md-4" style="padding-left: 20px" >
-                                            <select name="" id="year" class="form-control" style="width:300px;padding:3px 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
-                                                <option value="">2017年</option>
-                                                <option value="">2018年</option>
-                                                <option value="">2019年</option>
-                                                <option value="">2020年</option>
-                                            </select>
-                                        </div>
+                                        <form  action="" class="form-horizontal"  role="form" style="padding-left: 50px;font-size: 16px">
+                                            <!-- 年份和假期选择器 -->
+                                            <div class="form-group">
+                                                <label class="col-md-5">年份</label>
+                                                <label class="col-md-5">假期</label>
+                                            </div>
 
-                                        <br>
+                                            <div class="form-group">
+                                                <div class="col-md-5" >
+                                                    <select name="" id="year" class="form-control" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                                                        <option value="">2017年</option>
+                                                        <option value="">2017年</option>
+                                                        <option value="">2018年</option>
+                                                        <option value="">2018年</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-5" >
+                                                    <select name="" id="year" class="form-control" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                                                        <option value="">寒假</option>
+                                                        <option value="">暑假</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- 留校时间日期选择 -->
+                                            <div class="form-group">
+                                                <label for="first-date" class="col-md-5">第一阶段</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group date col-md-10" >
+                                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                                    <label class="input-group-addon">至</label>
+                                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                                </div>
+                                            </div>
 
-                                        <label style="padding-left: 20px">第一阶段</label>
-                                        <br>
-                                        <div class="col-md-4" style="padding-left: 20px" >
-                                            <select name="" id="year" class="form-control" style="width:300px;padding:3px 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
-                                                <option value="">2017年</option>
-                                                <option value="">2018年</option>
-                                                <option value="">2019年</option>
-                                                <option value="">2020年</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                        <div class="panel-footer">
-                                            Panel footer
+                                            <div class="form-group">
+                                                <label for="second-date" class="col-md-5">第二阶段</label>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="input-group date col-md-10" >
+                                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                                    <label class="input-group-addon">至</label>
+                                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                
+                                            </div>
+                                        </form>
+                                        <div class="panel-heading">
+                                                <div class="col-md-7"></div>
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-default btn-primary" data-toggle="modal" data-target="#checkInfo">设置</button>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-danger">重置</button>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -154,9 +183,9 @@
                 <!--寒假留校时间 panel-->
 
                 <div class="tab-pane" id="summerTime">
-                    <div class="table-responsive">
+                    <!-- <div class="table-responsive">
                         出去浪吗
-                    </div>
+                    </div> -->
                 </div>
                 <!--暑假留校时间 panel-->
             </div>
@@ -167,466 +196,317 @@
 </div>
 
 <!--2017年寒假留校时间修改modal-->
-<div class="modal fade" tabindex="-1" role="dialog" id="changeDorm" data-backdrop="static">
-    <div class="modal-dialog" style="width:auto; max-width:1000px">
+<div class="modal fade" tabindex="-1" role="dialog" id="winter2017Modal" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:800px">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                <h4 class="modal-title">处理调宿申请</h4>
+                <h4 class="modal-title">2017年寒假留校时间修改</h4>
             </div>
             <div class="modal-body">
                 <form>
+                    <p>已设值的留校时间:</p>
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">学号:</label>
-                                <label class="control-label">2014101027</label>
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/01/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                </div>
+                                
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">姓名:</label>
-                                <label class="control-label">王俊皓</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">申请时间:</label>
-                                <label class="control-label">2017年21年99日 -1时</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学院:</label>
-                                <label class="control-label">工学院</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">专业:</label>
-                                <label class="control-label" >计算机科学与技术</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">宿舍:</label>
-                                <label class="control-label">弘毅 ABC</label>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">联系电话:</label>
-                                <label class="control-label">12312345678</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">邮箱:</label>
-                                <label class="control-label">14jhwang@stu.edu.cn</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">拟申请宿舍:</label>
-                                <label class="control-label">弘毅 XYZ</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <p>
-                                    balabalabalabalabalabalabalabalabalabalabalabala
-                                </p>
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/21" readonly="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <hr/>
-                    <p>调整方案：</p>
-                    <div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" style="padding-left: 0">
-                            <div class="input-group">
-                                <span class="input-group-addon">宿舍楼号</span>
-                                <input type="text" class="form-control" placeholder="宿舍楼号" name="dorm_floor_number"
-                                       value="">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">宿舍楼层</span>
-                                <input type="text" class="form-control" autocomplete="off" placeholder="宿舍楼层" name="dorm_floor" value="">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">宿舍号</span>
-                                <input type="text" class="form-control" placeholder="宿舍号" autocomplete="off" name="dorm_number" value="">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">床位号</span>
-                                <input type="text" class="form-control" placeholder="床位号" autocomplete="off" name="bed_number" value="">
+                    <p>修改人</p>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+                            <div class="form-group">
+                                <input class="form-control"  style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;" size="16" type="text" value="李新" readonly="">
                             </div>
                         </div>
                     </div>
-                    <p>备注：</p>
-                    <div>
-                        <textarea class="form-control" placeholder="调整原因备注..."></textarea>
+                    <hr/>
+                    <p>修改时间：</p>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+                            <div class="form-group">
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+                            <div class="form-group">
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button class="btn btn-primary">确定调整方案</button>
-                <button class="btn btn-danger">不做任何调整</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消修改</button>
+                <button class="btn btn-primary">确定修改</button>
             </div>
         </div>
     </div>
 </div>
 
 <!--2017年暑假留校时间修改modal-->
-<div class="modal fade" tabindex="-1" role="dialog" id="checkOut" data-backdrop="static">
-    <div class="modal-dialog" style="width:auto; max-width:1000px">
+<div class="modal fade" tabindex="-1" role="dialog" id="summer2017Modal" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:800px">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                <h4 class="modal-title">处理退宿申请</h4>
+                <h4 class="modal-title">2017年寒假留校时间修改</h4>
             </div>
             <div class="modal-body">
                 <form>
+                    <p>已设值的留校时间:</p>
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">学号:</label>
-                                <label class="control-label">2014101027</label>
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/01/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                </div>
+                                
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">姓名:</label>
-                                <label class="control-label">王俊皓</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">申请时间:</label>
-                                <label class="control-label">2017年21年99日 -1时</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学院:</label>
-                                <label class="control-label">工学院</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">专业:</label>
-                                <label class="control-label" >计算机科学与技术</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">宿舍:</label>
-                                <label class="control-label">弘毅 ABC</label>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">联系电话:</label>
-                                <label class="control-label">12312345678</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">邮箱:</label>
-                                <label class="control-label">14jhwang@stu.edu.cn</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <p>
-                                    balabalabalabalabalabalabalabalabalabalabalabala
-                                </p>
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/21" readonly="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <hr/>
-                    <label class="control-label">备注:</label>
-                    <div>
-                        <textarea class="form-control" placeholder="原因备注..."></textarea>
+                    <p>修改人</p>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+                            <div class="form-group">
+                                <input class="form-control"  style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;" size="16" type="text" value="李新" readonly="">
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <p>修改时间：</p>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+                            <div class="form-group">
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+                            <div class="form-group">
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button class="btn btn-primary">同意</button>
-                <button class="btn btn-danger">不同意</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消修改</button>
+                <button class="btn btn-primary">确定修改</button>
             </div>
         </div>
     </div>
 </div>
 
 <!--2018年寒假留校时间修改modal-->
-<div class="modal fade" tabindex="-1" role="dialog" id="changeLog" data-backdrop="static">
-    <div class="modal-dialog" style="width:auto; max-width:1000px">
+<div class="modal fade" tabindex="-1" role="dialog" id="winter2018Modal" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:800px">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                <h4 class="modal-title">查看调宿申请</h4>
+                <h4 class="modal-title">2017年寒假留校时间修改</h4>
             </div>
             <div class="modal-body">
                 <form>
+                    <p>已设值的留校时间:</p>
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">学号:</label>
-                                <label class="control-label">2014101027</label>
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/01/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                </div>
+                                
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">姓名:</label>
-                                <label class="control-label">王俊皓</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">申请时间:</label>
-                                <label class="control-label">2017年21年99日 -1时</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学院:</label>
-                                <label class="control-label">工学院</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">专业:</label>
-                                <label class="control-label" >计算机科学与技术</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">宿舍:</label>
-                                <label class="control-label">弘毅 ABC</label>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">联系电话:</label>
-                                <label class="control-label">12312345678</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">邮箱:</label>
-                                <label class="control-label">14jhwang@stu.edu.cn</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">拟申请宿舍:</label>
-                                <label class="control-label">弘毅 XYZ</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <p>
-                                    balabalabalabalabalabalabalabalabalabalabalabala
-                                </p>
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/21" readonly="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <hr/>
+                    <p>修改人</p>
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">经办人:</label>
-                                <input type="text" class="form-control" readonly="readonly" value="李新老师">
+                                <input class="form-control"  style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;" size="16" type="text" value="李新" readonly="">
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    </div>
+                    <hr/>
+                    <p>修改时间：</p>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">处理时间:</label>
-                                <input type="text" class="form-control" readonly="readonly" value="2017-08-09 14:00:00">
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">状态:</label>
-                                <label class="label label-success">允许</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <textarea class="form-control" placeholder="处理原因..." readonly="readonly">balabalabalabalabalabalabalabalabalabalabalabala
-                                </textarea>
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消修改</button>
+                <button class="btn btn-primary">确定修改</button>
             </div>
         </div>
     </div>
 </div>
 
+
 <!--2018年暑假留校时间修改modal-->
-<div class="modal fade" tabindex="-1" role="dialog" id="checkOutLog" data-backdrop="static">
-    <div class="modal-dialog" style="width:auto; max-width:1000px">
+<div class="modal fade" tabindex="-1" role="dialog" id="summer2018Modal" data-backdrop="static">
+    <div class="modal-dialog" style="width:auto; max-width:800px">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                <h4 class="modal-title">查看退宿申请</h4>
+                <h4 class="modal-title">2017年寒假留校时间修改</h4>
             </div>
             <div class="modal-body">
                 <form>
+                    <p>已设值的留校时间:</p>
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">学号:</label>
-                                <label class="control-label">2014101027</label>
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/01/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                </div>
+                                
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">姓名:</label>
-                                <label class="control-label">王俊皓</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">申请时间:</label>
-                                <label class="control-label">2017年21年99日 -1时</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">学院:</label>
-                                <label class="control-label">工学院</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">专业:</label>
-                                <label class="control-label" >计算机科学与技术</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">原住宿舍:</label>
-                                <label class="control-label">弘毅 ABC</label>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">联系电话:</label>
-                                <label class="control-label">12312345678</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="form-group">
-                                <label class="control-label">邮箱:</label>
-                                <label class="control-label">14jhwang@stu.edu.cn</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <p>
-                                    balabalabalabalabalabalabalabalabalabalabalabala
-                                </p>
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group">
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/01" readonly="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="2017/02/21" readonly="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <hr/>
+                    <p>修改人</p>
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">经办人:</label>
-                                <input type="text" class="form-control" readonly="readonly" value="李新老师">
+                                <input class="form-control"  style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;" size="16" type="text" value="李新" readonly="">
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    </div>
+                    <hr/>
+                    <p>修改时间：</p>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">处理时间:</label>
-                                <input type="text" class="form-control" readonly="readonly" value="2017-08-09 14:00:00">
+                                <label class="control-label">第一阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
                             <div class="form-group">
-                                <label class="control-label">状态:</label>
-                                <label class="label label-danger">拒绝</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label class="control-label">备注:</label>
-                                <textarea class="form-control" placeholder="处理原因..." readonly="readonly">balabalabalabalabalabalabalabalabalabalabalabala
-                                </textarea>
+                                <label class="control-label">第二阶段时间:</label>
+                                <div class="input-group" >
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                    <label class="input-group-addon">至</label>
+                                    <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消修改</button>
+                <button class="btn btn-primary">确定修改</button>
             </div>
         </div>
     </div>
@@ -645,6 +525,44 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        language:  'zh',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startDate: new Date(),
+        startView: 2,
+        forceParse: 0,
+        minView: 2,
+        showMeridian: 1,
+        todayHighlight:1
+    });
+    $('.form_date').datetimepicker({
+        language:  'zh',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        language:  'zh',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
 </body>
 </html>
-    

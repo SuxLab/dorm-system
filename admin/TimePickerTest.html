@@ -10,34 +10,52 @@
 <div class="container">
     <form action="" class="form-horizontal"  role="form">
         <fieldset>
-            <legend>Test</legend>
-            <div class="form-group">
-                <label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>
-                <div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                    <input class="form-control" size="16" type="text" value="" readonly>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+            
+            
+                <div class="form-group">
+                    <label class="col-md-5">年份</label>
+                    <label class="col-md-5">假期</label>
                 </div>
-				<input type="hidden" id="dtp_input1" value="" /><br/>
-            </div>
-			<div class="form-group">
-                <label for="dtp_input2" class="col-md-2 control-label">Date Picking</label>
-                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16" type="text" value="" readonly>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <div class="form-group">
+                    <div class="col-md-5" >
+                        <select name="" id="year" class="form-control" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                            <option value="">2017年</option>
+                            <option value="">2017年</option>
+                            <option value="">2018年</option>
+                            <option value="">2018年</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5" >
+                        <select name="" id="year" class="form-control" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                            <option value="">寒假</option>
+                            <option value="">暑假</option>
+                        </select>
+                    </div>
                 </div>
-				<input type="hidden" id="dtp_input2" value="" /><br/>
-            </div>
-			<div class="form-group">
-                <label for="dtp_input3" class="col-md-2 control-label">Time Picking</label>
-                <div class="input-group date form_time col-md-5" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
-                    <input class="form-control" size="16" type="text" value="" readonly>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                <div class="form-group">
+                    <label for="first-date" class="col-md-5">第一阶段</label>
                 </div>
-				<input type="hidden" id="dtp_input3" value="" /><br/>
-            </div>
+
+                <div class="form-group">
+                    <div class="input-group date col-md-6" >
+                        <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                        <label class="input-group-addon">至</label>
+                        <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="first-date" class="col-md-5">第二阶段</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group date col-md-6" >
+                        <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                        <label class="input-group-addon">至</label>
+                        <input class="form-control form_date" data-date="2017/01/01" data-date-format="yyyy/MM/dd " " size="16" type="text" value="">
+                    </div>
+                </div>				<!-- <input type="hidden" id="dtp_input1" value="" /><br/> -->
+           
         </fieldset>
     </form>
 </div>
@@ -48,17 +66,20 @@
 <script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <script type="text/javascript">
     $('.form_datetime').datetimepicker({
-        //language:  'fr',
+        language:  'zh',
         weekStart: 1,
         todayBtn:  1,
 		autoclose: 1,
 		todayHighlight: 1,
+        startDate: new Date(),
 		startView: 2,
 		forceParse: 0,
-        showMeridian: 1
+        minView: 2,
+        showMeridian: 1,
+        todayHighlight:1
     });
 	$('.form_date').datetimepicker({
-        language:  'fr',
+        language:  'zh',
         weekStart: 1,
         todayBtn:  1,
 		autoclose: 1,
@@ -68,7 +89,7 @@
 		forceParse: 0
     });
 	$('.form_time').datetimepicker({
-        language:  'fr',
+        language:  'zh',
         weekStart: 1,
         todayBtn:  1,
 		autoclose: 1,
