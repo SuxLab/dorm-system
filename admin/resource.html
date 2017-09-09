@@ -52,7 +52,6 @@
                     <li><a href="bookManager.html">共享书屋</a></li>
                     <li><a href="searchInfo.html">宿生信息检索</a></li>
                     <li><a href="checkIn.html">入宿处理</a></li>
-                    <li><a href="notice.html">注意事项模板管理</a></li>
                     <li><a href="extraStayTime.html">留校时间段设置</a></li>
                 </ul>
             </div>
@@ -100,7 +99,7 @@
                                         <td>2017-10-01 08:00:00</td>
                                         <td>
                                             <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminDealtRepair">
-                                        查看及处理
+                                        归还
                                     </button>
                                         </td>
                                     </tr>
@@ -112,7 +111,7 @@
                                         <td>2017-10-01 08:00:00</td>
                                         <td>
                                             <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminDealtRepair">
-                                        查看及处理
+                                        归还
                                     </button>
                                         </td>
                                     </tr>
@@ -229,7 +228,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">资源申请处理</h4>
+                    <h4 class="modal-title">资源归还</h4>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -292,7 +291,7 @@
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <label class="control-label">资源名称:</label>
-                                    <label class="control-label">打火机</label>
+                                    <input type="text" class="form-control" readonly="readonly" value="空调遥控器">
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -325,8 +324,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button class="btn btn-primary">同意</button>
-                    <button class="btn btn-danger">不同意</button>
+                    <button class="btn btn-primary">确认归还</button>
                 </div>
             </div>
         </div>
@@ -401,13 +399,13 @@
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <label class="control-label">资源名称:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="水管爆了标题标题">
+                                    <label class="control-label">钥匙</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label">备注:</label>
-                                    <textarea class="form-control" readonly="readonly">balablabalabalablabalabalablabalabalablabalabalablabala</textarea>
+                                    <p class="control-label">学生的申请备注XXXXXXXXXXXXXXX</p>
                                 </div>
                             </div>
                             <hr/>
