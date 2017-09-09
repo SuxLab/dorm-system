@@ -9,16 +9,23 @@
     <meta name="author" content="">
     <link rel="icon" href="../image/favicon.ico">
 
-    <title>入宿处理 - 宿舍管理系统</title>
+    <title>个人信息 - 宿舍管理系统</title>
+
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/admin.css" rel="stylesheet">
+    <link href="../css/student.css" rel="stylesheet">
+
+
+    <style>
+        .table tbody tr td {
+            vertical-align: middle;
+        }
+    </style>
 
 </head>
 
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
-
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -34,41 +41,44 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-
-                <li><a href="info_admin.html"><span class="glyphicon glyphicon-user"></span> 李新老师</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 李新老师</a></li>
                 <li><a data-toggle="modal" data-target="#logout">注销</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><a href="index.html">宿舍退调申请处理</span></a></li>
+                <li><a href="index.html">宿舍退调申请处理</a></li>
                 <li><a href="repair.html">宿舍报修申请处理</a></li>
                 <li><a href="resource.html">宿舍资源申请处理</a></li>
                 <li><a href="activity.html">社区活动申请处理</a></li>
                 <li><a href="bookManager.html">共享书屋</a></li>
                 <li><a href="searchInfo.html">宿生信息检索</a></li>
-                <li class="active"><a href="checkIn.html">入宿处理<span class="sr-only">(current)</span></a></li>
+                <li><a href="checkIn.html">入宿处理</a></li>
                 <li><a href="extraStayTime.html">留校时间段设置</a></li>
             </ul>
         </div>
+
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+
             <h1 class="page-header">
-                入宿处理
+                个人信息
                 <div class="pull-right">
-                    <button type="button" class="btn btn-info">确认入住</button>
+                    <button type="button" class="btn btn-info">保存信息</button>
                 </div>
             </h1>
-            <h3>宿生基本信息录入</h3>
+
             <form>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="form-group">
-                            <label class="control-label">学号:</label>
+                            <label class="control-label">工号:</label>
                             <input type="text" class="form-control" readonly="readonly" value="2014101027">
                         </div>
                     </div>
@@ -89,20 +99,6 @@
 
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="form-group">
-                            <label class="control-label">学院:</label>
-                            <input type="text" class="form-control" readonly="readonly" value="工学院">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="form-group">
-                            <label class="control-label">专业:</label>
-                            <input type="text" class="form-control" readonly="readonly" value="计算机科学与技术">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="form-group">
                             <label class="control-label">联系电话:</label>
                             <input type="text" class="form-control" value="185209292388">
                         </div>
@@ -115,88 +111,30 @@
                         </div>
                     </div>
 
-
                 </div>
+
             </form>
-            <hr/>
-            <h3>宿生宿舍安排</h3>
+            <hr>
             <form>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">账号</span>
-                            <input type="text" class="form-control" placeholder="账号" value="">
+                        <div class="form-group">
+                            <label class="control-label">账号:</label>
+                            <label class="control-label">suguanliu</label>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">密码</span>
-                            <input type="text" class="form-control" placeholder="仅可设置不可查看" value="">
-                        </div>
-                    </div>
-                </div>
-                <br/>
-                <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="form-group">
-                            <label class="control-label">宿舍楼:</label>
-                            <select class="combobox">
-                                <option></option>
-                                <option value="A">A座</option>
-                                <option value="B">B座</option>
-                                <option value="C">C座</option>
-                                <option value="D">D座</option>
-                                <option value="E">E座</option>
-                                <option value="F">F座</option>
-                                <option value="G">G座</option>
-                                <option value="J">至诚书院</option>
-                                <option value="H">弘毅书院</option>
-                                <option value="S">思源书院</option>
-                                <option value="Z">知行书院</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="form-group">
-                            <label class="control-label">宿舍号:</label>
-                            <!--注意，这里下拉框的宿舍，是后台返回的“有空床位”的宿舍-->
-                            <select class="combobox">
-                                <option></option>
-                                <option value="101">101</option>
-                                <option value="102">102</option>
-                                <option value="103">103</option>
-                                <option value="205">205</option>
-                                <option value="206">206</option>
-                                <option value="338">338</option>
-                                <option value="443">443</option>
-                                <option value="533">533</option>
-                                <option value="624">624</option>
-                                <option value="632">632</option>
-                                <option value="634">634</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="form-group">
-                            <label class="control-label">床位号:</label>
-                            <select class="combobox">
-                                <option></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
+                            <label class="control-label">密码:</label>
+                            <input type="text" class="form-control" placeholder="仅可修改不能查看">
                         </div>
                     </div>
                 </div>
             </form>
 
+
         </div>
-
     </div>
-
 </div>
 
 <!--注销modal-->
@@ -222,19 +160,12 @@
 </div>
 
 <!-- Bootstrap core JavaScript
-================================================== -->
+  ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-    window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
-
-</script>
+<script src="../js/jquery-2.2.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="../js/vendor/holder.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../js/ie10-viewport-bug-workaround.js"></script>
-<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="../js/holder.min.js"></script>
 </body>
 
 </html>
