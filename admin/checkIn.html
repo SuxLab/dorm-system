@@ -123,6 +123,21 @@
                 <form>
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">账号</span>
+                                <input type="text" class="form-control" placeholder="账号" value="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">密码</span>
+                                <input type="text" class="form-control" placeholder="仅可设置不可查看" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                             <div class="form-group">
                                 <label class="control-label">宿舍楼:</label>
                                 <select class="combobox">
@@ -182,237 +197,6 @@
 
         </div>
 
-    </div>
-
-    <!--待办事项modal-->
-    <div class="modal fade" tabindex="-1" role="dialog" id="adminDealtRepair" data-backdrop="static">
-        <div class="modal-dialog" style="width:auto; max-width:1000px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">报修申请处理</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学号:</label>
-                                    <label class="control-label">2014101027</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">姓名:</label>
-                                    <label class="control-label">王俊皓</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">申请时间:</label>
-                                    <label class="control-label">2017年21年99日 -1时</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学院:</label>
-                                    <label class="control-label">工学院</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">专业:</label>
-                                    <label class="control-label">计算机科学与技术</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">宿舍:</label>
-                                    <label class="control-label">弘毅 ABC</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">联系电话:</label>
-                                    <label class="control-label">12312345678</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">邮箱:</label>
-                                    <label class="control-label">14jhwang@stu.edu.cn</label>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">报修标题:</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label">备注:</label>
-                                    <textarea class="form-control" placeholder="原因备注..."></textarea>
-                                </div>
-                            </div>
-                            <hr/>
-                            <!--日期选择器未完善-->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">预约时间段1:</label>
-                                    <div class='input-group date' id='datetimepicker1'>
-                                        <input type='text' class="form-control" />
-                                        <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--日期选择器未完善-->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">预约时间段2:</label>
-                                    <div class='input-group date' id='datetimepicker2'>
-                                        <input type='text' class="form-control" />
-                                        <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button class="btn btn-primary">已通知维修人员</button>
-                    <button class="btn btn-danger">不维修</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--记录modal-->
-    <div class="modal fade" tabindex="-1" role="dialog" id="adminRepairLog" data-backdrop="static">
-        <div class="modal-dialog" style="width:auto; max-width:1000px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">报修记录查看</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学号:</label>
-                                    <label class="control-label">2014101027</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">姓名:</label>
-                                    <label class="control-label">王俊皓</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">申请时间:</label>
-                                    <label class="control-label">2017年21年99日 -1时</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学院:</label>
-                                    <label class="control-label">工学院</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">专业:</label>
-                                    <label class="control-label">计算机科学与技术</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">宿舍:</label>
-                                    <label class="control-label">弘毅 ABC</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">联系电话:</label>
-                                    <label class="control-label">12312345678</label>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">邮箱:</label>
-                                    <label class="control-label">14jhwang@stu.edu.cn</label>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">报修标题:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="水管爆了标题标题">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label">备注:</label>
-                                    <textarea class="form-control" readonly="readonly">balablabalabalablabalabalablabalabalablabalabalablabala</textarea>
-                                </div>
-                            </div>
-                            <hr/>
-                            <!--日期选择器未完善-->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">预约时间段1:</label>
-                                    <label class="control-label">2017-08-10 14:00-16:10</label>
-                                </div>
-                            </div>
-
-                            <!--日期选择器未完善-->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">预约时间段2:</label>
-                                    <label class="control-label">2017-08-10 16:00-18:10</label>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">状态:</label>
-                                    <label class="label label-success">已维修</label>
-                                </div>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确定</button>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!--注销modal-->
