@@ -25,285 +25,300 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                    aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-                <a class="navbar-brand" href="#">学生宿舍管理系统</a>
-            </div>
-
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="info_student.html"><span class="glyphicon glyphicon-user"></span> 何铭宜 同学</a></li>
-                    <li><a href="#">注销</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 col-xs-3 sidebar" id="side">
-                <ul class="nav nav-sidebar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">学生宿舍管理系统</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="info_student.html"><span class="glyphicon glyphicon-user"></span> 何铭宜 同学</a></li>
+                <li><a href="#">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 col-xs-3 sidebar" id="side">
+            <ul class="nav nav-sidebar">
+                <li>
+                    <a href="index.html">宿舍退调申请</a>
+                </li>
+                <li class="active">
+                    <a href="repair.html">宿舍设施报修申请</a>
+                </li>
+                <li>
+                    <a href="payment.html">生活缴费</a>
+                </li>
+                <li>
+                    <a href="resource.html">宿舍资源申请</a>
+                </li>
+                <li>
+                    <a href="meeting.html">研讨室申请</a>
+                </li>
+                <li>
+                    <a href="activity.html">社区活动申请</a>
+                </li>
+                <li>
+                    <a href="book.html">共享书屋<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+
+            <h1 class="page-header">
+                宿舍设施报修申请
+                <div class="pull-right">
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#func_repair">申请报修
+                    </button>
+                </div>
+            </h1>
+
+            <!-- <br> -->
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>报修时间</th>
+                        <th>报修标题</th>
+                        <th>申请人</th>
+                        <th>现住宿舍</th>
+                        <th>经办人</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>10000</td>
+                        <td>2017-05-02 17:33:34</td>
+                        <td>空调坏了</td>
+                        <td>卢程</td>
+                        <td>弘毅 G613-2</td>
+                        <td>刘宿管</td>
+                        <td><span class="label label-warning">申请中</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"
+                                    data-target="#detail_1">查看
+                            </button>
+                            <button type="button" class="btn btn-danger btn-xs">取消</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10000</td>
+                        <td>2017-05-02 17:33:34</td>
+                        <td>人坏了</td>
+                        <td>卢程</td>
+                        <td>弘毅 G613-2</td>
+                        <td>刘宿管</td>
+                        <td><span class="label label-danger">申请失败</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"
+                                    data-target="#detail_1">查看
+                            </button>
+                            <button type="button" class="btn btn-danger btn-xs">取消</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pull-right">
+                <ul class="pagination">
                     <li>
-                        <a href="index.html">宿舍退调申请</a>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
                     </li>
-                    <li class="active">
-                        <a href="repair.html">宿舍设施报修申请</a>
-                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
                     <li>
-                        <a href="payment.html">生活缴费</a>
-                    </li>
-                    <li>
-                        <a href="resource.html">宿舍资源申请</a>
-                    </li>
-                    <li>
-                        <a href="meeting.html">研讨室申请</a>
-                    </li>
-                    <li>
-                        <a href="activity.html">社区活动申请</a>
-                    </li>
-                    <li>
-                        <a href="book.html">共享书屋<span class="sr-only">(current)</span></a>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
                     </li>
                 </ul>
             </div>
+            <!-- ./pagination -->
+        </div>
+    </div>
+</div>
 
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<div class="modal fade" id="func_repair" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document" style="width:auto; max-width:1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">申请报修</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学号:</label>
+                                <label class="control-label">2014101027</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">姓名:</label>
+                                <label class="control-label">王俊皓</label>
+                            </div>
+                        </div>
 
 
-                <h1 class="page-header">
-                    宿舍设施报修申请
-                    <div class="pull-right">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#func_repair">申请报修</button>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学院:</label>
+                                <label class="control-label">工学院</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">专业:</label>
+                                <label class="control-label">计算机科学与技术</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">申请时间:</label>
+                                <label class="control-label">2017年21年99日 -1时</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">现住宿舍:</label>
+                                <label class="control-label">弘毅 ABC</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">报修时间:</label>
+                                <input type="text" class="form-control" readonly="readonly" value="2017年21年99日 -1时">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">联系电话:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">邮箱:</label>
+                                <input type="text" class="form-control" value="14jhwang@stu.edu.cn">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">报修标题:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">报修描述:</label>
+                                <input type="text" class="form-control" value="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
                     </div>
-                </h1>
 
-                <!-- <br> -->
+                </form>
+            </div>
 
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>编号</th>
-                                <th>报修时间</th>
-                                <th>报修标题</th>
-                                <th>申请人</th>
-                                <th>现住宿舍</th>
-                                <th>经办人</th>
-                                <th>状态</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>10000</td>
-                                <td>2017-05-02 17:33:34</td>
-                                <td>空调坏了</td>
-                                <td>卢程</td>
-                                <td>弘毅 G613-2</td>
-                                <td>刘宿管</td>
-                                <td><span class="label label-warning">申请中</span></td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#detail_1">查看</button>
-                                    <button type="button" class="btn btn-danger btn-xs">取消</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>10000</td>
-                                <td>2017-05-02 17:33:34</td>
-                                <td>人坏了</td>
-                                <td>卢程</td>
-                                <td>弘毅 G613-2</td>
-                                <td>刘宿管</td>
-                                <td><span class="label label-danger">申请失败</span></td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#detail_1">查看</button>
-                                    <button type="button" class="btn btn-danger btn-xs">取消</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="pull-right">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- ./pagination -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确认申请</button>
             </div>
         </div>
     </div>
+</div>
+<!-- modal - 申请报修 -->
 
 
-    <div class="modal fade" id="func_repair" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document" style="width:auto; max-width:1000px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">申请报修</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
+<div class="modal fade" id="detail_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document" style="width:auto; max-width:800px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">详细信息</h4>
+            </div>
+            <div class="modal-body">
+                <form>
 
-                        <div class="row">
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学号:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="2014101027">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">姓名:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="王俊皓">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学院:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="工学院">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">专业:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="计算机科学与技术">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                    <div class="form-group">
-                                        <label class="control-label">报修标题:</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">报修时间:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="2017年21年99日 -1时">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">现住宿舍:</label>
-                                    <input type="text" class="form-control" readonly="readonly" value="弘毅 ABC">
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">联系电话:</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">邮箱:</label>
-                                    <input type="text" class="form-control" value="14jhwang@stu.edu.cn">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">报修描述:</label>
-                                    <input type="text" class="form-control" value="">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label">备注:</label>
-                                    <textarea class="form-control"></textarea>
-                                </div>
+                    <!-- 反正只写一个 for each, 因为不同申请项显示的条目是不同的 -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学号:</label>
+                                <br> 2014101027
                             </div>
                         </div>
+                        <!-- ︿(￣︶￣)︿ -->
+                        <!-- 这里继续补充吧, 复制就OK -->
+                        <!-- 注意还有可能还有原因 -->
 
-                    </form>
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">确认申请</button>
-                </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
             </div>
         </div>
     </div>
-    <!-- modal - 申请报修 -->
+</div>
+<!-- modal - 查看 -->
 
 
-    <div class="modal fade" id="detail_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document" style="width:auto; max-width:800px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">详细信息</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-
-                        <!-- 反正只写一个 for each, 因为不同申请项显示的条目是不同的 -->
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <div class="form-group">
-                                    <label class="control-label">学号:</label>
-                                    <br> 2014101027
-                                </div>
-                            </div>
-                            <!-- ︿(￣︶￣)︿ -->
-                            <!-- 这里继续补充吧, 复制就OK -->
-                            <!-- 注意还有可能还有原因 -->
-
-                        </div>
-
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal - 查看 -->
-
-
-
-    <!-- Bootstrap core JavaScript
-      ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../js/jquery-2.2.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../js/holder.min.js"></script>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery-2.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../js/holder.min.js"></script>
 </body>
 
 </html>
