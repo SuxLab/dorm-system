@@ -79,9 +79,6 @@
                 <h1 class="page-header">
                     共享书屋
                     <small>总共 42 本书</small>
-                    <div class="pull-right">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#bookShare">分享书籍</button>
-                    </div>
                 </h1>
 
                 <!-- Nav tabs -->
@@ -506,53 +503,6 @@
         </div>
     </div>
     <!-- ./bookReturn -->
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="bookShare" data-backdrop="static">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
-                    <h4 class="modal-title">分享书籍</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <form class="form-horizontal" id="form-share">
-
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">书籍名称</label>
-                                <div class="col-md-8">
-                                    <input name="book_name" type="text" class="form-control" autocomplete="off">
-                                </div>
-                            </div>
-                            <!-- /.form-group -->
-
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">书籍作者</label>
-                                <div class="col-md-8">
-                                    <input name="book_author" type="text" class="form-control" autocomplete="off">
-                                </div>
-                            </div>
-                            <!-- /.form-group -->
-
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">书籍关键字</label>
-                                <div class="col-md-8">
-                                    <textarea name="book_desc" rows="4" class="form-control" autocomplete="off"></textarea>
-                                </div>
-                            </div>
-                            <!-- /.form-group -->
-
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-success">确定</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ./bookShare -->
 
     <!-- Bootstrap core JavaScript
       ================================================== -->

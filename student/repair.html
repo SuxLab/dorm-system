@@ -113,7 +113,7 @@
                         <td><span class="label label-warning">申请中</span></td>
                         <td>
                             <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"
-                                    data-target="#detail_1">查看
+                                    data-target="#check_detail">查看
                             </button>
                             <button type="button" class="btn btn-danger btn-xs">取消</button>
                         </td>
@@ -128,7 +128,7 @@
                         <td><span class="label label-danger">申请失败</span></td>
                         <td>
                             <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"
-                                    data-target="#detail_1">查看
+                                    data-target="#check_detail">查看
                             </button>
                             <button type="button" class="btn btn-danger btn-xs">取消</button>
                         </td>
@@ -172,7 +172,6 @@
             </div>
             <div class="modal-body">
                 <form>
-
                     <div class="row">
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
@@ -188,8 +187,6 @@
                                 <label class="control-label">王俊皓</label>
                             </div>
                         </div>
-
-
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                             <div class="form-group">
@@ -208,7 +205,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                             <div class="form-group">
                                 <label class="control-label">申请时间:</label>
-                                <label class="control-label">2017年21年99日 -1时</label>
+                                <label class="control-label">2017-05-02 17:33:34</label>
                             </div>
                         </div>
 
@@ -219,10 +216,10 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                             <div class="form-group">
                                 <label class="control-label">报修时间:</label>
-                                <input type="text" class="form-control" readonly="readonly" value="2017年21年99日 -1时">
+                                <input type="text" class="form-control" readonly="readonly" value="2017-05-02 17:33:34">
                             </div>
                         </div>
 
@@ -240,14 +237,14 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                             <div class="form-group">
                                 <label class="control-label">报修标题:</label>
                                 <input type="text" class="form-control">
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                             <div class="form-group">
                                 <label class="control-label">报修描述:</label>
                                 <input type="text" class="form-control" value="">
@@ -266,8 +263,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">确认申请</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
             </div>
         </div>
     </div>
@@ -275,36 +271,107 @@
 <!-- modal - 申请报修 -->
 
 
-<div class="modal fade" id="detail_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document" style="width:auto; max-width:800px">
+<div class="modal fade" id="check_detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document" style="width:auto; max-width:1000px">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">详细信息</h4>
+                <h4 class="modal-title">查看</h4>
             </div>
             <div class="modal-body">
                 <form>
-
-                    <!-- 反正只写一个 for each, 因为不同申请项显示的条目是不同的 -->
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                             <div class="form-group">
                                 <label class="control-label">学号:</label>
-                                <br> 2014101027
+                                <label class="control-label">2014101027</label>
                             </div>
                         </div>
-                        <!-- ︿(￣︶￣)︿ -->
-                        <!-- 这里继续补充吧, 复制就OK -->
-                        <!-- 注意还有可能还有原因 -->
 
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">姓名:</label>
+                                <label class="control-label">王俊皓</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">学院:</label>
+                                <label class="control-label">工学院</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">专业:</label>
+                                <label class="control-label">计算机科学与技术</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">申请时间:</label>
+                                <label class="control-label">2017-05-02 17:33:34</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">现住宿舍:</label>
+                                <label class="control-label">弘毅 ABC</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">报修时间:</label>
+                                <label class="control-label">2017-05-02 10:00-12:00</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">联系电话:</label>
+                                <label class="control-label">12312345678</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">邮箱:</label>
+                                <label class="control-label">14jhwang@stu.edu.cn</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">报修标题:</label>
+                                <label class="control-label">水管爆了</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">报修描述:</label>
+                                <p>这是报修描述这是报修描述这是报修描述这是报修描述这是报修描述这是报修描述</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">备注:</label>
+                                <p>这是报修备注这是报修备注这是报修备注这是报修备注这是报修备注这是报修备注</p>
+                            </div>
+                        </div>
                     </div>
-
                 </form>
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确认申请</button>
             </div>
         </div>
     </div>
